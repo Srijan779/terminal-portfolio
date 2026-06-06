@@ -1,0 +1,33 @@
+/* Core Terminal Layout System */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: monospace; }
+body { background: #050508; color: #00ff33; display: flex; min-height: 100vh; padding: 25px; gap: 20px; }
+
+/* Sidebar Layout */
+.sidebar { width: 200px; border: 1px solid #005511; background: #000; padding: 20px; border-radius: 4px; }
+.photo-box { background: #001100; border: 1px dashed #00aa22; padding: 10px; text-align: center; margin-bottom: 25px; border-radius: 3px; }
+.photo-box pre { color: #00ff33; font-size: 11px; line-height: 1.3; font-weight: bold; }
+
+.directory-title { font-size: 11px; color: #008822; letter-spacing: 1px; margin-bottom: 12px; font-weight: bold; }
+.dir-item { font-size: 14px; color: #00aa22; padding: 6px 0; transition: 0.1s; }
+/* Highlight indicator for current command state */
+.dir-item.current { color: #fff; text-shadow: 0 0 5px #00ff33; font-weight: bold; }
+
+/* Console View Window */
+.console-box { flex: 1; border: 1px solid #005511; background: #000; padding: 30px; border-radius: 4px; display: flex; flex-direction: column; gap: 25px; }
+.heading { color: #fff; font-weight: bold; margin-bottom: 10px; }
+.tab-panel { display: none; min-height: 150px; line-height: 1.6; }
+.tab-panel.active { display: block; }
+
+/* Module styling units */
+.item { margin-top: 15px; padding-left: 12px; border-left: 2px solid #00aa22; }
+.item strong { color: #fff; }
+.skill { margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between; }
+.bar { width: 180px; height: 8px; background: #001100; border: 1px solid #005511; }
+.fill { height: 100%; background: #00ff33; }
+
+/* Console Input Bar Layout */
+.cli-engine { border-top: 1px dashed #005511; padding-top: 20px; margin-top: auto; }
+.input-row { display: flex; align-items: center; gap: 10px; }
+.prompt { color: #00aa22; font-weight: bold; }
+#cli-input { background: none; border: none; color: #fff; outline: none; flex: 1; font-size: 14px; font-family: monospace; }
+#cli-output { margin-top: 12px; color: #ffff33; font-size: 13px; }

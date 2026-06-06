@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Srijan | Dev Terminal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- STATIC SIDEBAR DIRECTORY -->
+    <div class="sidebar">
+        <!-- ASCII Photo Box Placeholder -->
+        <div class="photo-box">
+            <pre>
+ [ o _ o ]
+  / | \ 
+  _ / \ _ 
+[SRIJAN//SYS]
+            </pre>
+        </div>
+        
+        <div class="directory-title">COMMAND LIST</div>
+        <!-- Static labels (Non-clickable) -->
+        <div class="dir-item" id="lbl-home">> home</div>
+        <div class="dir-item" id="lbl-projects">> projects</div>
+        <div class="dir-item" id="lbl-skills">> skills</div>
+        <div class="dir-item" id="lbl-clear">> clear</div>
+    </div>
+
+    <!-- CENTRAL MONITOR CANVAS -->
+    <div class="console-box">
+        
+        <!-- PANEL: HOME -->
+        <div id="home" class="tab-panel active">
+            <p class="heading">=== SRIJAN SOURAV ENGINE ENV ===</p>
+            <p>Status: Online | Term: Semester II</p>
+            <p style="margin-top: 15px;">I am a dual-degree student working on core mathematical structures, game automation layout loops, and clean frontend codebases.</p>
+        </div>
+
+        <!-- PANEL: PROJECTS -->
+        <div id="projects" class="tab-panel">
+            <p class="heading">>>> ACTIVE PROJECT REPOSITORIES</p>
+            <div class="item">
+                <strong>campus-trade-logic</strong>
+                <p>Backend transaction flow and state checking for a student micro-rental marketplace layout.</p>
+            </div>
+            <div class="item">
+                <strong>smart-queue-node</strong>
+                <p>IoT automation module tracking distance intervals via hardware code structures.</p>
+            </div>
+        </div>
+
+        <!-- PANEL: SKILLS -->
+        <div id="skills" class="tab-panel">
+            <p class="heading">>>> COMPILED CORE BENCHMARKS</p>
+            <div class="skill">
+                <span>HTML5 / CSS3 Layouts</span>
+                <div class="bar"><div class="fill" style="width: 85%;"></div></div>
+            </div>
+            <div class="skill">
+                <span>Vanilla JS DOM Ops</span>
+                <div class="bar"><div class="fill" style="width: 70%;"></div></div>
+            </div>
+            <div class="skill">
+                <span>C# Logical Engines</span>
+                <div class="bar"><div class="fill" style="width: 75%;"></div></div>
+            </div>
+        </div>
+
+        <!-- INTERACTIVE CONSOLE LINE -->
+        <div class="cli-engine">
+            <div class="input-row">
+                <span class="prompt">guest@srijan_dev:~$</span>
+                <input type="text" id="cli-input" placeholder="type a command from the list..." autofocus autocomplete="off">
+            </div>
+            <p id="cli-output">System initialized. Ready for user directive...</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
