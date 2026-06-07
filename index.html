@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Srijan | Dev Terminal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- STATIC SIDEBAR DIRECTORY -->
     <div class="sidebar">
-        <!-- ASCII Photo Box Placeholder -->
         <div class="photo-box">
-            <pre>
- [ o _ o ]
-  / | \ 
-  _ / \ _ 
-[SRIJAN//SYS]
-            </pre>
+            <img src="profile.jpg" alt="Srijan Sourav" class="terminal-profile-pic">
+            <div class="sys-tag">[SRIJAN//SYS]</div>
         </div>
         
         <div class="directory-title">COMMAND LIST</div>
-        <!-- Static labels (Non-clickable) -->
         <div class="dir-item current" id="lbl-home">> home</div>
         <div class="dir-item" id="lbl-projects">> projects</div>
         <div class="dir-item" id="lbl-experience">> experience</div>
@@ -27,10 +22,8 @@
         <div class="dir-item" id="lbl-clear">> clear</div>
     </div>
 
-    <!-- CENTRAL MONITOR CANVAS -->
     <div class="console-box">
         
-        <!-- PANEL: HOME -->
         <div id="home" class="tab-panel active">
             <p class="heading">=== SRIJAN SOURAV // CORE IDENTITY ===</p>
             <p>Status: Online | Location: Hazaribagh, Jharkhand</p>
@@ -46,7 +39,6 @@
             </div>
         </div>
 
-        <!-- PANEL: PROJECTS -->
         <div id="projects" class="tab-panel">
             <p class="heading">>>> REPOSITORY: SOURCE CODE PROJECTS</p>
             <div class="item">
@@ -63,7 +55,6 @@
             </div>
         </div>
 
-        <!-- PANEL: EXPERIENCE -->
         <div id="experience" class="tab-panel">
             <p class="heading">>>> LOGGED TECHNICAL EXPERIENCE</p>
             <div class="item">
@@ -72,7 +63,7 @@
             </div>
             <div class="item">
                 <strong>Co-coordinator & Developer | School of Mathematics, SMVDU Tech Fest</strong>
-                <p>Developed the "Maths Maze" gaming application and co-coordinated the event under the School of Mathematics.</p>
+                <p>Developing the "Maths Maze" gaming application and co-coordinating the operational execution format.</p>
             </div>
             <div class="item">
                 <strong>Game Developer | SMVDU Cultural Fest Website Team</strong>
@@ -80,7 +71,6 @@
             </div>
         </div>
 
-        <!-- PANEL: SKILLS -->
         <div id="skills" class="tab-panel">
             <p class="heading">>>> COMPILED SKILL BENCHMARKS</p>
             <div class="skill">
@@ -97,7 +87,6 @@
             </div>
         </div>
 
-        <!-- INTERACTIVE CONSOLE LINE -->
         <div class="cli-engine">
             <div class="input-row">
                 <span class="prompt">guest@srijan_dev:~$</span>
