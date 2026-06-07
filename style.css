@@ -21,7 +21,14 @@ body { background: #050508; color: #00ff33; display: flex; min-height: 100vh; pa
 /* Module styling units */
 .item { margin-top: 15px; padding-left: 12px; border-left: 2px solid #00aa22; }
 .item strong { color: #fff; }
-.skill { margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between; }
+
+.skill { 
+    margin-bottom: 15px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 8px; 
+}
 .bar { width: 180px; height: 8px; background: #001100; border: 1px solid #005511; }
 .fill { height: 100%; background: #00ff33; }
 

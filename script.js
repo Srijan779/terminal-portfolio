@@ -2,6 +2,11 @@
 const cliInput = document.getElementById('cli-input');
 const cliOutput = document.getElementById('cli-output');
 
+// Automatically lock cursor focus to the terminal line when clicking anywhere on screen
+document.addEventListener('click', function() {
+    if (cliInput) cliInput.focus();
+});
+
 // Reusable function to handle display transitions
 document.addEventListener('keydown', function(event) {
     // Check if user hit the Enter key
@@ -10,8 +15,8 @@ document.addEventListener('keydown', function(event) {
         let command = cliInput.value.toLowerCase().trim();
         cliInput.value = ''; // Clean the input field instantly
 
-        // Command Validation Map
-        if (command === 'home' || command === 'projects' || command === 'skills') {
+        // Added 'experience' validation to the registry array map
+        if (command === 'home' || command === 'projects' || command === 'experience' || command === 'skills') {
             
             // 1. Hide all middle panels
             let panels = document.querySelectorAll('.tab-panel');
@@ -21,11 +26,17 @@ document.addEventListener('keydown', function(event) {
             let labels = document.querySelectorAll('.dir-item');
             labels.forEach(function(l) { l.classList.remove('current'); });
 
-            // 3. Mount active states to selected panel and label
-            document.getElementById(command).classList.add('active');
-            document.getElementById('lbl-' + command).classList.add('current');
+            // 3. Secure pointers to target layout views safely
+            let targetPanel = document.getElementById(command);
+            let targetLabel = document.getElementById('lbl-' + command);
 
-            cliOutput.innerText = "Execution success: Loaded system registry '" + command + "'.";
+            if (targetPanel && targetLabel) {
+                targetPanel.classList.add('active');
+                targetLabel.classList.add('current');
+                cliOutput.innerText = "Execution success: Loaded system registry '" + command + "'.";
+            } else {
+                cliOutput.innerText = "Error: System found matching keyword code but HTML nodes are missing.";
+            }
         
         } else if (command === 'clear') {
             // Reset log display string
@@ -33,7 +44,7 @@ document.addEventListener('keydown', function(event) {
             
         } else {
             // Handle fault scenarios
-            cliOutput.innerText = "Error: Routine '" + command + "' unrecognized. Try 'home', 'projects', or 'skills'.";
+            cliOutput.innerText = "Error: Routine '" + command + "' unrecognized. Try 'home', 'projects', 'experience', or 'skills'.";
         }
     }
 });
